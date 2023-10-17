@@ -1,5 +1,11 @@
 <div id="page_wrapper">
   <h1>Edit Post</h1>
+  <%= form_with(model: @post, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :online %>
+    <%= form.check_box :online %>
+  </div>
+<% end %>
 
   <%= render 'form' %>
 
